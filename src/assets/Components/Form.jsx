@@ -1,10 +1,6 @@
-import React, {useState} from 'react';
-
-import React from 'react';
-import Input from './input';;
-import Card from 'Card';
-
-
+import React, { useState } from 'react';
+import Input from './input';
+import Card from './Card'; // Corregido el nombre del componente y la ruta
 
 function Formulario() {
     const [nombre, setNombre] = useState('');
@@ -12,15 +8,15 @@ function Formulario() {
     const [error, setError] = useState('');
 
     const handleChangeNombre = (event) => {
-        setNombre(e.target.value);
+        setNombre(event.target.value); // Corregido el nombre del parámetro
     };
 
     const handleChangeCorreo = (event) => {
-        setCorreo(e.target.value);
+        setCorreo(event.target.value); // Corregido el nombre del parámetro
     };
 
     const handleSubmit = (event) => {
-        e.preventDefault();
+        event.preventDefault(); // Corregido el nombre del parámetro
         if (nombre.trim().length < 3 || /^\s/.test(nombre)) {
             setError('Por favor, ingresa un nombre válido.');
             return;
@@ -44,6 +40,5 @@ function Formulario() {
         </div>
     );
 }
-  
-  export default Form;
-  
+
+export default Formulario;
