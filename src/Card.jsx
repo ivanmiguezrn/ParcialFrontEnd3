@@ -3,9 +3,15 @@ import React from "react";
 
 
 
-const Card = () => {
-  return <div>Hola, soy una tarjeta</div>;
-};
+function Card({ nombre, correo }) {
+  return (
+    <div>
+      <h2>Información ingresada:</h2>
+      <p>Nombre: {nombre}</p>
+      <p>Correo: {correo}</p>
+    </div>
+  );
+}
 
 
 export default Card;
